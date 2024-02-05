@@ -1,11 +1,17 @@
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
+import { BiLogoPostgresql, BiLogoWordpress, BiMessage, BiMessageAlt, BiPhone } from "react-icons/bi";
+import { FaEnvelope, FaPhone } from "react-icons/fa6";
+import { SiApache, SiNginx, SiPostman } from "react-icons/si";
 import {
   TbArrowUpRight,
+  TbBrandAws,
   TbBrandGithub,
   TbBrandInstagram,
+  TbBrandLaravel,
   TbBrandLinkedin,
+  TbBrandMysql,
   TbBrandTumblr,
   TbLine,
   TbLineDashed,
@@ -95,29 +101,227 @@ export default function Home() {
         </Container>
       </div>
 
-      {/* Portfolio Section */}
-      <div className="h-screen bg-yellow-500">
+      {/* Skills Section */}
+      <div className="h-screen bg-yellow-500 max-lg:h-auto">
         <Container>
           <div className="py-32">
-            <div>Latest Projects</div>
-            <div>
+            <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
               <div>
-                <div></div>
-                <div></div>
+                <h2 className="text-6xl font-semibold mb-8">
+                  Skills &<br /> Experience
+                </h2>
+                <div className="flex gap-4 mb-16">
+                  <TbLineDashed />
+                  <p>
+                    Semper feugiat nibh sed pulvinar. Pharetra massa
+                    <br /> massa ultricies mi quis. Eget mi proin sed libero
+                    enim
+                    <br /> sed faucibus turpis ultricies mi quis.
+                  </p>
+                </div>
+                <div className="">
+                  <h3 className="text-2xl font-semibold mb-6">Skills</h3>
+                  <div className="grid grid-cols-4 gap-10 mb-8 max-md:grid-cols-2">
+                    <div>
+                      <TbBrandLaravel className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Laravel</p>
+                    </div>
+                    <div>
+                      <TbBrandMysql className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Mysql</p>
+                    </div>
+                    <div>
+                      <BiLogoPostgresql className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">POSTGRESQL</p>
+                    </div>
+                    <div>
+                      <TbBrandAws className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Cloud(AWS)</p>
+                    </div>
+                    <div>
+                      <SiApache className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Apache2</p>
+                    </div>
+                    <div>
+                      <SiNginx className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Nginx</p>
+                    </div>
+                    <div>
+                      <SiPostman className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Postman</p>
+                    </div>
+                    <div>
+                      <BiLogoWordpress className="text-4xl h-[50px] w-[50px] text-white rounded-full p-3 bg-black mb-2" />
+                      <p className="font-medium">Wordpress</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
+              <div>
+                <div className="pb-8">
+                  <h2 className="text-2xl font-semibold ">Experience</h2>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2  border-black">
+                  <p className="text-sm font-medium">2023 - Present</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      USSD Developer
+                    </p>
+                    <p className="text-xs font-medium">Google</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2 border-black">
+                  <p className="text-sm font-medium">2023 - Present</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      USSD Developer
+                    </p>
+                    <p className="text-xs font-medium">Google</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2 border-black">
+                  <p className="text-sm font-medium">2023 - Present</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      USSD Developer
+                    </p>
+                    <p className="text-xs font-medium">Google</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2 border-black">
+                  <p className="text-sm font-medium">2023 - Present</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      USSD Developer
+                    </p>
+                    <p className="text-xs font-medium">Google</p>
+                  </div>
+                </div>
+                <div className="pt-8">
+                  <h2 className="text-2xl font-semibold ">Certifications</h2>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2 border-black">
+                  <p className="text-sm font-medium">2023</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      Google Data Analytics
+                    </p>
+                    <p className="text-xs font-medium">Google</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-8 py-4 border-t-2 border-black">
+                  <p className="text-sm font-medium">2022</p>
+                  <div>
+                    <p className="text-base font-semibold mb-2">
+                      AWS Cloud Practitioner
+                    </p>
+                    <p className="text-xs font-medium">Amazon Course</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </Container>
       </div>
-      <div className="h-screen bg-gray-100">
+
+      {/* Portfolio Section */}
+      <div className="h-screen bg-gray-100 max-lg:h-auto">
         <Container>
-          <div></div>
+          <div className="py-32">
+            <h2 className="text-5xl font-semibold mb-8">Latest Projects</h2>
+            <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
+              <div className="">
+                <div className="flex items-center justify-between py-4 border-t border-black">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      USSD Development
+                    </h3>
+                    <p className="">In ornare quam viverra orci.</p>
+                  </div>
+                  <Link href="/">
+                    <TbArrowUpRight className="h-[35px] w-[35px] bg-violet-600 text-white text-xs p-1 rounded-full" />
+                  </Link>
+                </div>
+                <div className="w-full h-full bg-slate-200 flex items-center justify-center object-cover max-lg:h-auto">
+                  <Image src="/ussd.png" alt="" width={300} height={300} />
+                </div>
+              </div>
+              <div className="">
+                <div className="flex items-center justify-between py-4 border-t border-black">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Backend Development
+                    </h3>
+                    <p className="">In ornare quam viverra orci.</p>
+                  </div>
+                  <Link href="/">
+                    <TbArrowUpRight className="h-[35px] w-[35px] bg-violet-600 text-white text-xs p-1 rounded-full" />
+                  </Link>
+                </div>
+                <div className="w-full h-full bg-violet-200 flex items-center justify-center object-cover max-lg:h-auto">
+                  <Image src="/backend.png" alt="" width={500} height={500} />
+                </div>
+              </div>
+              <div className="">
+                <div className="flex items-center justify-between py-4 border-t border-black">
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">
+                      Cloud Services
+                    </h3>
+                    <p className="">In ornare quam viverra orci.</p>
+                  </div>
+                  <Link href="/">
+                    <TbArrowUpRight className="h-[35px] w-[35px] bg-violet-600 text-white text-xs p-1 rounded-full" />
+                  </Link>
+                </div>
+                <div className="w-full h-full bg-gray-200 flex items-center justify-center object-cover max-lg:h-auto">
+                  <Image src="/cloud.png" alt="" width={300} height={350} />
+                </div>
+              </div>
+            </div>
+          </div>
         </Container>
       </div>
-      <div className="h-screen bg-yellow-500">
+
+      {/* Contact Section */}
+      <div className="h-screen bg-yellow-500 max-lg:h-auto">
         <Container>
-          <div></div>
+          <div className="py-32">
+            <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+              <div>
+                <h2 className="text-6xl font-semibold mb-12">
+                  Lets Discuss
+                  <br />
+                  Your Project
+                </h2>
+                <div>
+                  <div className="flex items-start gap-8 py-8 border-t-2 border-black">
+                    <div className="">
+                      <FaEnvelope className="h-[45px] w-[45px] p-3 bg-white rounded-full text-xs" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium">Email</p>
+                      <p className="text-base font-semibold mb-2">
+                        quaysontitus@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-8 py-8 border-t-2 border-black">
+                    <div className="">
+                      <FaPhone className="h-[45px] w-[45px] p-3 bg-white rounded-full text-xs" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium">Phone</p>
+                      <p className="text-base font-semibold mb-2">
+                        +233 543 611 072
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full border rounded-full border-black"></div>
+            </div>
+          </div>
         </Container>
       </div>
     </main>
