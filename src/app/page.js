@@ -1,7 +1,14 @@
 import Container from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
-import { BiLogoPostgresql, BiLogoWordpress, BiMessage, BiMessageAlt, BiPhone } from "react-icons/bi";
+import {
+  BiLogoPostgresql,
+  BiLogoWordpress,
+  BiMenu,
+  BiMessage,
+  BiMessageAlt,
+  BiPhone,
+} from "react-icons/bi";
 import { FaEnvelope, FaPhone } from "react-icons/fa6";
 import { SiApache, SiNginx, SiPostman } from "react-icons/si";
 import {
@@ -20,65 +27,72 @@ import {
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="relative">
       {/* Hero Section */}
-      <div className="h-screen bg-gray-100 max-lg:h-auto">
+      <div className="h-auto bg-gray-100 xl:h-screen" id="about">
         <Container>
           <div className="">
             {/* Header */}
-            <div className="sticky top-0 bg-slate-100 flex items-center justify-between py-4">
-              <Link href="#top" className="flex items-center gap-2">
-                <TbBrandTumblr className="border-2 border-gray-500 text-yellow-600 rounded-full h-[35px] w-[35px] p-[6px]" />
-                <span className="font-medium">Portfolio</span>
-              </Link>
-              <nav className="flex gap-4 font-medium text-[14px]">
-                <Link
-                  href="#about"
-                  className="hover:text-yellow-500 transition-all duration-500 ease-out"
-                >
-                  About
-                </Link>
-                <Link
-                  href="#portfolio"
-                  className="hover:text-yellow-500 transition-all duration-500 ease-out"
-                >
-                  Portfolio
-                </Link>
-                <Link
-                  href="#services"
-                  className="hover:text-yellow-500 transition-all duration-500 ease-out"
-                >
-                  Services
-                </Link>
-                <Link
-                  href="#testimonials"
-                  className="hover:text-yellow-500 transition-all duration-500 ease-out"
-                >
-                  Testimonials
-                </Link>
-              </nav>
+            <div className="fixed right-0 left-0 bg-slate-100">
+              <Container>
+                <div className="flex items-center justify-between py-4">
+                  <Link href="#top" className="flex items-center gap-2">
+                    <TbBrandTumblr className="border-2 border-gray-500 text-yellow-600 rounded-full h-[35px] w-[35px] p-[6px]" />
+                    <span className="font-medium">Portfolio</span>
+                  </Link>
+                  <nav className="flex gap-4 font-medium text-[14px] max-lg:hidden">
+                    <Link
+                      href="#about"
+                      className="hover:text-yellow-500 transition-all duration-500 ease-out"
+                    >
+                      About
+                    </Link>
+                    <Link
+                      href="#experience"
+                      className="hover:text-yellow-500 transition-all duration-500 ease-out"
+                    >
+                      Experience
+                    </Link>
+                    <Link
+                      href="#portfolio"
+                      className="hover:text-yellow-500 transition-all duration-500 ease-out"
+                    >
+                      Portfolio
+                    </Link>
+                    <Link
+                      href="#contact"
+                      className="hover:text-yellow-500 transition-all duration-500 ease-out"
+                    >
+                      Contact
+                    </Link>
+                  </nav>
+                  <div className=" text-2xl lg:hidden">
+                    <BiMenu className="" />
+                  </div>
+                </div>
+              </Container>
             </div>
 
-            <div className="grid grid-cols-2 h-[80%] max-lg:grid-cols-1 max-lg:h-auto">
+            <div className="grid grid-cols-1 h-auto pt-40 lg:grid-cols-2 xl:">
               <div className="flex flex-col gap-32 h-full pr-4 max-lg:h-auto">
-                <div className="grid gap-12 pt-28">
-                  <div className="text-7xl font-semibold">
+                <div className="grid gap-12">
+                  <div className="text-5xl font-bold md:text-6xl xl:text-7xl ">
                     <h1>We have Design Experience</h1>
                   </div>
                   <div className="flex gap-2 items-start">
                     <TbLineDashed className="text-violet-600 text-2xl" />
-                    <p>
+                    <p className="font-medium">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       <br />
                       magna aliqua. quam lacus suspendisse faucibus.
                     </p>
                   </div>
                   <div className="flex">
-                    <button className="flex items-center gap-2 p-3 bg-violet-600 rounded-2xl text-white">
+                    <button className="flex items-center gap-2 px-4 py-3 bg-violet-600 rounded-2xl font-medium text-white">
                       Lets Chat
                       <TbMessageForward />
                     </button>
-                    <button className="flex items-center gap-2 p-3 bg-transparent rounded-2xl">
+                    <button className="flex items-center gap-2 px-4 yp-3 bg-transparent rounded-2xl font-medium">
                       Portfolio
                       <TbArrowUpRight />
                     </button>
@@ -102,12 +116,12 @@ export default function Home() {
       </div>
 
       {/* Skills Section */}
-      <div className="h-screen bg-yellow-500 max-lg:h-auto">
+      <div className="h-screen bg-yellow-500 max-lg:h-auto" id="experience">
         <Container>
           <div className="py-32">
             <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
               <div>
-                <h2 className="text-6xl font-semibold mb-8">
+                <h2 className="text-5xl font-semibold mb-8 xl:text-6xl">
                   Skills &<br /> Experience
                 </h2>
                 <div className="flex gap-4 mb-16">
@@ -225,10 +239,10 @@ export default function Home() {
       </div>
 
       {/* Portfolio Section */}
-      <div className="h-screen bg-gray-100 max-lg:h-auto">
+      <div className="h-screen bg-gray-100 max-lg:h-auto" id="portfolio">
         <Container>
           <div className="py-32">
-            <h2 className="text-5xl font-semibold mb-8">Latest Projects</h2>
+            <h2 className="text-5xl font-semibold mb-8 xl:text-6xl">Latest Projects</h2>
             <div className="grid grid-cols-3 gap-8 max-lg:grid-cols-1">
               <div className="">
                 <div className="flex items-center justify-between py-4 border-t border-black">
@@ -284,10 +298,10 @@ export default function Home() {
       </div>
 
       {/* Contact Section */}
-      <div className="h-screen bg-yellow-500 max-lg:h-auto">
+      <div className="h-auto bg-yellow-500 xl:h-screen" id="contact">
         <Container>
-          <div className="py-32">
-            <div className="grid grid-cols-2 gap-4 max-lg:grid-cols-1">
+          <div className="flex flex-col justify-between h-screen pt-32">
+            <div className="grid grid-cols-2 gap-4 h-[80%] max-lg:grid-cols-1">
               <div>
                 <h2 className="text-6xl font-semibold mb-12">
                   Lets Discuss
@@ -320,6 +334,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-full h-full border rounded-full border-black"></div>
+            </div>
+            <div className="flex justify-between text-xs font-medium pb-12 pt-4 border-t-2 border-black">
+              <span>© 2024 All Right Reserved</span>
+              <span>Design by ...........</span>
             </div>
           </div>
         </Container>
